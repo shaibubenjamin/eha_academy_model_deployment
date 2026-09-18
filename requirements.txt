@@ -1,0 +1,30 @@
+# -----------------------------------------------------------------------
+# requirements.txt
+# -----------------------------------------------------------------------
+# This file lists every external Python package modeldeployment.py needs.
+# Lines starting with "#" are comments — pip ignores them; they are here
+# purely to explain, for beginners, why each package is included.
+#
+# HOW THIS FILE IS USED:
+#   - Locally:  pip install -r requirements.txt
+#   - Docker:   the Dockerfile (see the big comment block at the top of
+#               modeldeployment.py) runs this exact same command INSIDE
+#               the container, so the image always has everything it needs.
+#
+# Versions are left unpinned on purpose, so this stays easy to install
+# while you're learning. In a real production project, you would pin
+# exact versions here (e.g. streamlit==1.38.0) so every install — yours,
+# a teammate's, and the Docker image's — is byte-for-byte identical.
+# -----------------------------------------------------------------------
+
+# Streamlit itself: turns our Python script into the interactive web app.
+streamlit
+
+# scikit-learn: provides LogisticRegression, the model we train and use.
+scikit-learn
+
+# numpy: builds the numeric arrays we feed into the model.
+numpy
+
+# pandas: only used to display a neat summary table of the user's answers.
+pandas
